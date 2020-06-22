@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC49A959-C1CD-43B4-BF61-EAF8B226C538}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DoAn_QLCC</RootNamespace>
+    <AssemblyName>DoAn_QLCC</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls, Version=2.2.5.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Controls.2.2.5\lib\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.2.5.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartHotKey, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SmartHotKey.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClearLog_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClearLog_form.Designer.cs">
+      <DependentUpon>ClearLog_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clipboard_monitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clipboard_monitoring.Designer.cs">
+      <DependentUpon>Clipboard_monitoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control_monitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control_monitoring.Designer.cs">
+      <DependentUpon>Control_monitoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Disble_password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Disble_password.Designer.cs">
+      <DependentUpon>Disble_password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Password_checker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password_checker.Designer.cs">
+      <DependentUpon>Password_checker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_changeOld_password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_changeOld_password.Designer.cs">
+      <DependentUpon>Form_changeOld_password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HiddenMode_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HiddenMode_Form.Designer.cs">
+      <DependentUpon>HiddenMode_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="image_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="image_view.Designer.cs">
+      <DependentUpon>image_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log_Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log_Options.Designer.cs">
+      <DependentUpon>Log_Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log_View_form\KeyStroke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log_View_form\KeyStroke.Designer.cs">
+      <DependentUpon>KeyStroke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log_View.Designer.cs">
+      <DependentUpon>Log_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options_Form_Controller\Check_HotKey_form_controller.cs" />
+    <Compile Include="Options_Form_Controller\ClearLog_Controller.cs" />
+    <Compile Include="Options_Form_Controller\Empty_Recyclebin.cs" />
+    <Compile Include="Options_Form_Controller\SizeLog_Controller.cs" />
+    <Compile Include="Options_general.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options_general.Designer.cs">
+      <DependentUpon>Options_general.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options_view.Designer.cs">
+      <DependentUpon>Options_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Password_setting_First.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password_setting_First.Designer.cs">
+      <DependentUpon>Password_setting_First.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Log_View_form\Program_Log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log_View_form\Program_Log.Designer.cs">
+      <DependentUpon>Program_Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registry_Start\Registry_startup.cs" />
+    <Compile Include="Log_View_form\Screen_Capture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log_View_form\Screen_Capture.Designer.cs">
+      <DependentUpon>Screen_Capture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log_View_form\WebCam_log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log_View_form\WebCam_log.Designer.cs">
+      <DependentUpon>WebCam_log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log_View_form\Web_Log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log_View_form\Web_Log.Designer.cs">
+      <DependentUpon>Web_Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security_general.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Security_general.Designer.cs">
+      <DependentUpon>Security_general.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ClearLog_form.resx">
+      <DependentUpon>ClearLog_form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clipboard_monitoring.resx">
+      <DependentUpon>Clipboard_monitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control_monitoring.resx">
+      <DependentUpon>Control_monitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Disble_password.resx">
+      <DependentUpon>Disble_password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Password_checker.resx">
+      <DependentUpon>Password_checker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_changeOld_password.resx">
+      <DependentUpon>Form_changeOld_password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HiddenMode_Form.resx">
+      <DependentUpon>HiddenMode_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="image_view.resx">
+      <DependentUpon>image_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log_Options.resx">
+      <DependentUpon>Log_Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log_View_form\KeyStroke.resx">
+      <DependentUpon>KeyStroke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log_View.resx">
+      <DependentUpon>Log_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options_general.resx">
+      <DependentUpon>Options_general.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options_view.resx">
+      <DependentUpon>Options_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log_View_form\Program_Log.resx">
+      <DependentUpon>Program_Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Password_setting_First.resx">
+      <DependentUpon>Password_setting_First.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Log_View_form\Screen_Capture.resx">
+      <DependentUpon>Screen_Capture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log_View_form\WebCam_log.resx">
+      <DependentUpon>WebCam_log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log_View_form\Web_Log.resx">
+      <DependentUpon>Web_Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security_general.resx">
+      <DependentUpon>Security_general.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="App_config\packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_config\App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.107.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.107.0\build\net451\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.107.0\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.107.0\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>
